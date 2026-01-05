@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="DevContainerExample.ApiService/DevContainerExample.ApiService.csproj" />
+  <Project Path="DevContainerExample.AppHost/DevContainerExample.AppHost.csproj" />
+  <Project Path="DevContainerExample.ServiceDefaults/DevContainerExample.ServiceDefaults.csproj" />
+  <Project Path="DevContainerExample.Web/DevContainerExample.Web.csproj" />
+</Solution>

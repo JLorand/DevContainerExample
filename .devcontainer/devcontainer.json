@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
+{
+	"name": "C# (.NET)",
+	"image": "mcr.microsoft.com/devcontainers/dotnet:latest",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"version": "latest",
+			"enableNonRootDocker": true,
+			"moby": true
+		}
+	},
+	"hostRequirements": {
+		"cpus": 4,
+		"memory": "4gb",
+		"storage": "16gb"
+	},
+	"onCreateCommand": "curl -sSL https://aspire.dev/install.sh | bash",
+	"postStartCommand": "dotnet dev-certs https --trust && dotnet new install Aspire.ProjectTemplates --force",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.csdevkit",
+				"microsoft-aspire.aspire-vscode",
+				"kreativ-software.csharpextensions",
+				"ms-azuretools.vscode-docker",
+				"editorconfig.editorconfig",
+				"github.copilot",
+				"github.copilot-chat",
+				"github.vscode-pull-request-github",
+				"patcx.vscode-nuget-gallery",
+				"ms-vscode.vs-keybindings"
+			]
+		}
+	}
+}
